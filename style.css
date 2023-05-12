@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  margin-left: 6.5rem;
+  margin-right: 6.5rem;
+  color: whitesmoke;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  padding-bottom: 9px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.navbar__logo h3 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 3rem;
+}
+.navbar__menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.navbar__menu ul li {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.navbar__menu ul li a {
+  font-size: 20px;
+}
+.navbar__menu ul li a:hover {
+  color: #828282;
+  border-bottom: 1px solid #27ae60;
+}
+
+section {
+  margin-top: 5rem;
+}
+section .banner {
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .banner__left p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #828282;
+  padding-bottom: 2rem;
+}
+section .banner__left--button {
+  display: flex;
+  gap: 0.5rem;
+}
+section .banner__left--button a {
+  border: 1px solid #f2f2f2;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 12px 24px;
+}
+section .banner__left--button .greenB {
+  background-color: #27ae60;
+  border: none;
+}
+section .banner__right {
+  width: 50%;
+}
+section .banner__right img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  float: right;
+}
+section .about {
+  padding-bottom: 120px;
+  text-align: center;
+}
+section .about .aContainer {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+section .about__heading {
+  padding-bottom: 36px;
+}
+section .about__text {
+  padding-bottom: 2.5rem;
+}
+section .about__buttons {
+  padding-left: 150px;
+  padding-right: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+section .about__buttons--items svg {
+  margin-bottom: 4px;
+}
+section .about__buttons--items p,
+section .about__buttons--items a {
+  margin-bottom: 4px;
+}
+section .iDo {
+  padding-bottom: 102px;
+}
+section .iDo h1 {
+  text-align: center;
+  margin-bottom: 72px;
+}
+section .iDo__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .iDo__row--card {
+  padding: 50px 30px;
+  width: 30%;
+  background-color: #212121;
+}
+section .iDo__row--card svg {
+  margin-bottom: 30px;
+}
+section .iDo__row--card h3 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 47px;
+  color: #535353;
+}
+section .skills {
+  padding-bottom: 102px;
+}
+section .skills h1 {
+  margin-bottom: 72px;
+  text-align: center;
+}
+section .skills__row {
+  border: 1px solid #333333;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section .skills__row--value {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+section .skills__row--value h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 94px;
+  color: #4f4f4f;
+}
+section .skills__row--value p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  color: #27ae60;
+}
+section .contact {
+  padding: 0 20%;
+}
+section .contact h1 {
+  text-align: center;
+}
+section .contact .form {
+  margin: 82px 0;
+}
+section .contact .form__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+section .contact .form__row--group {
+  width: 100%;
+}
+section .contact .form__row--group input,
+section .contact .form__row--group textarea {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #4f4f4f;
+  margin-bottom: 48px;
+  color: white;
+  font-size: 18px;
+}
+section .contact .form__row--group input:focus,
+section .contact .form__row--group textarea:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+section .contact .form__row--group #sMessage {
+  width: 100%;
+  border: 1px solid #4f4f4f;
+  overflow-y: auto;
+}
+section .contact .form__row2 {
+  justify-content: center;
+}
+section .contact .form__row2 .group2 {
+  width: auto;
+}
+section .contact .form__row2 a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 12px 24px;
+  background-color: #27ae60;
+  border: none;
+}
+
+.upKey {
+  display: none;
+  background-color: #171717;
+  border: 3px solid #fff;
+  border-radius: 20%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  section .about__buttons {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section .iDo__row h3 {
+    font-size: 28px;
+  }
+  section .skills__row--value h2 {
+    font-size: 56px;
+  }
+  section .contact {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .navbar__menu {
+    width: 100%;
+  }
+  .navbar__menu ul li a:hover {
+    color: white;
+    border: none;
+  }
+  section .banner__left--button {
+    flex-direction: column;
+  }
+  section .banner__left--button a {
+    width: 70%;
+  }
+  section .about .aContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  section .about__text p {
+    font-size: 20px;
+  }
+  section .about__buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2rem;
+  }
+  section .about__buttons p, section .about__buttons a {
+    font-size: 20px;
+  }
+  section .iDo__row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  section .iDo__row--card {
+    padding: 50px 30px;
+    width: 80%;
+    text-align: center;
+  }
+  section .skills__row {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar__menu ul {
+    display: none;
+  }
+  section {
+    margin-top: 2rem;
+  }
+  section .banner {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  section .banner__left {
+    text-align: center;
+  }
+  section .banner__left--button {
+    align-items: center;
+  }
+  section .banner__right {
+    width: 80%;
+  }
+  section .banner__right img {
+    float: none;
+  }
+  section .about {
+    padding-bottom: 70px;
+  }
+  section .about__buttons {
+    grid-template-columns: 1fr;
+  }
+  section .iDo__row--card {
+    width: 100%;
+  }
+  section .contact {
+    padding: 0;
+  }
+  section .contact .form__row {
+    flex-direction: column;
+    gap: 0px !important;
+  }
+  section .contact .form__row2 {
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
