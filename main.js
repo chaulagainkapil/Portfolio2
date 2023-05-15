@@ -1,5 +1,4 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 $(document).ready(function () {
   //scroll to Top
   $(document).on("scroll", function (evt) {
@@ -72,8 +71,6 @@ $(document).ready(function () {
       }
     );
   });
-
-  AOS.init();
 
   // Disable inspect element
 // $(document).bind("contextmenu",function(e) {
