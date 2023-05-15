@@ -4,6 +4,10 @@ $font__DM: "DM Sans", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
+input:-webkit-autofill { 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: whitesmoke !important;
+}
 body {
   background-color: #171717;
   margin-left: 6.5rem;
@@ -31,7 +35,7 @@ a {
     position: relative;
     &--close{
       position: absolute;
-      top: 0;
+      top: -24px;
       right: 0;
       z-index: 5;
       display: none;
@@ -372,8 +376,9 @@ section {
     }
     &__menu {
       position: absolute;
-      top: 120px;
+      top: 0;
       left: 0;
+      height: 100%;
       ul {
         visibility: hidden;
         opacity: 0;
@@ -384,7 +389,8 @@ section {
         background-color: #171717;
         width: 100%;
         height: 100%;
-        padding: 2rem 0;
+        padding: 0;
+        justify-content: center;
       }
     }
   }
