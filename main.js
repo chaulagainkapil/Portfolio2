@@ -21,4 +21,27 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+//navbar opening
+$(".navbar__icons--open").click(function(){
+    $(".navbar__menu ul").css("visibility", "visible");
+    $(".navbar__menu ul").css("opacity", "1");
+    $(".navbar__menu ul").css("transform", "translateY(0px)");
+    $(".navbar__icons--open").css("display", "none");
+    $(".navbar__icons--close").css("display", "block");
+})
+//navbar closing
+function closeNav(){
+    $(".navbar__menu ul").css("visibility", "hidden");
+    $(".navbar__menu ul").css("opacity", "0");
+    $(".navbar__menu ul").css("transform", "translateY(-100px)");
+    $(".navbar__icons--open").css("display", "block");
+    $(".navbar__icons--close").css("display", "none");
+}
+$(".navbar__icons--close").click(function (){
+    closeNav();
+})
+$(".navbar__menu ul li a").click(function(){
+    closeNav();
+})
 });
