@@ -241,12 +241,12 @@ section .contact .form__row2 {
 section .contact .form__row2 .group2 {
   width: auto;
 }
-section .contact .form__row2 a {
+section .contact .form__row2 .submitB {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   padding: 12px 24px;
-  background-color: #27ae60;
+  background-color: #27ae60 !important;
   border: none;
 }
 
