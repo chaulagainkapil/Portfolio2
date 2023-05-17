@@ -28,6 +28,6 @@ if(isset($_POST['kapil'])){
     }
 
   
-    // // close connection
-    // mysqli_close($con);
+    // close connection
+    mysqli_close($con);
 ?>
