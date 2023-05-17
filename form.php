@@ -24,7 +24,7 @@ if(isset($_POST['kapil'])){
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-       header("location:index.html");
+       header("location:index.html#contact");
     }
 
   
