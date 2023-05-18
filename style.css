@@ -227,6 +227,13 @@ section .portfolio .project__image:hover img {
 }
 section .portfolio .project__image:hover .projectCaption {
   display: block;
+  color: whitesmoke;
+}
+section .portfolio .project__desc h3 {
+  color: whiteSmoke;
+}
+section .portfolio .project__desc h4 {
+  color: silver;
 }
 section .portfolio .project__desc .tools svg, section .portfolio .project__desc .tools img,
 section .portfolio .project__desc .links svg,
@@ -241,7 +248,11 @@ section .portfolio .project__desc .links p {
 }
 section .portfolio .project__desc .tools p:hover,
 section .portfolio .project__desc .links p:hover {
-  color: #fff;
+  color: silver;
+}
+section .portfolio .project__desc .tools h4,
+section .portfolio .project__desc .links h4 {
+  color: silver;
 }
 section .contact {
   padding: 0 20%;

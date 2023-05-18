@@ -230,10 +230,17 @@ section {
           }
           .projectCaption {
             display: block;
+            color: whitesmoke;
           }
         }
       }
       &__desc {
+        h3{
+          color: whiteSmoke;
+        }
+        h4{
+          color: silver;
+        }
         .tools,
         .links {
           svg, img {
@@ -244,8 +251,11 @@ section {
           p {
             color: #333333;
             &:hover {
-              color: #fff;
+              color: silver;
             }
+          }
+          h4{
+            color: silver;
           }
         }
       }
