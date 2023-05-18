@@ -424,6 +424,7 @@ section .contact .form__row2 .submitB {
     font-size: 2rem;
   }
   .navbar {
+    margin-top: 1rem;
     flex-direction: row;
   }
   .navbar__logo h3 {
