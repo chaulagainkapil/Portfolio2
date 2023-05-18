@@ -198,7 +198,7 @@ section .skills__row--value p {
   color: #27ae60;
 }
 section .portfolio {
-  padding-bottom: 5rem;
+  padding-bottom: 102px;
 }
 section .portfolio .project {
   background: #212121;
@@ -208,9 +208,12 @@ section .portfolio .project__image img {
   height: auto;
   object-fit: contain;
   border-radius: 0.5rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
   filter: brightness(100%);
 }
 section .portfolio .project__image .projectCaption {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -219,11 +222,11 @@ section .portfolio .project__image .projectCaption {
 }
 section .portfolio .project__image:hover img {
   filter: brightness(20%);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 section .portfolio .project__image:hover .projectCaption {
   display: block;
@@ -384,13 +387,39 @@ section .contact .form__row2 .submitB {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 768px) {
+  section .portfolio .project__image .projectCaption {
+    position: static;
+    display: block;
+    top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: dimgray;
+  }
+  section .portfolio .project__image:hover .projectCaption {
+    display: block;
+    color: dimgray;
+  }
+  section .portfolio .project__image:hover img {
+    filter: brightness(100%);
+  }
+}
 @media screen and (max-width: 576px) {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  h1 {
+    font-size: 2rem;
+  }
   .navbar {
     flex-direction: row;
+  }
+  .navbar__logo h3 {
+    font-size: 1.75rem;
   }
   .navbar__icons {
     display: block;
@@ -415,7 +444,7 @@ section .contact .form__row2 .submitB {
     justify-content: center;
   }
   section {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   section .banner {
     flex-direction: column-reverse;
@@ -426,6 +455,12 @@ section .contact .form__row2 .submitB {
   }
   section .banner__left--button {
     align-items: center;
+  }
+  section .banner__left h1 {
+    font-size: 2.5rem;
+  }
+  section .banner__left p {
+    padding-bottom: 0;
   }
   section .banner__right {
     width: 80%;
@@ -439,11 +474,50 @@ section .contact .form__row2 .submitB {
   section .about__buttons {
     grid-template-columns: 1fr;
   }
+  section .about__heading {
+    padding-bottom: 0;
+  }
+  section .about__text {
+    padding-bottom: 1rem;
+  }
+  section .iDo {
+    padding-bottom: 70px;
+  }
+  section .iDo h1 {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+  }
   section .iDo__row--card {
     width: 100%;
   }
+  section .skills {
+    padding-bottom: 70px;
+  }
+  section .skills h1 {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+  section .portfolio {
+    padding-bottom: 70px;
+  }
+  section .portfolio h1 {
+    margin-bottom: 0;
+  }
+  section .portfolio .project__desc h3 {
+    font-size: 1.3rem;
+  }
+  section .portfolio .project__desc h4 {
+    font-size: 1rem;
+  }
   section .contact {
     padding: 0;
+  }
+  section .contact h1 {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+  section .contact .form {
+    margin-top: 0;
   }
   section .contact .form__row {
     flex-direction: column;

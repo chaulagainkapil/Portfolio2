@@ -201,7 +201,7 @@ section {
     }
   }
   .portfolio {
-    padding-bottom: 5rem;
+    padding-bottom: 102px;
     .project {
       background: #212121;
       &__image {
@@ -209,10 +209,12 @@ section {
           width: 100%;
           height: auto;
           object-fit: contain;
-          border-radius: 0.5rem;
+          border-radius: 0.5rem;margin-bottom: 0;
+          padding-bottom: 1rem;
           filter: brightness(100%);
         }
         .projectCaption {
+          position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -222,11 +224,11 @@ section {
         &:hover {
           img {
             filter: brightness(20%);
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            -o-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-            transition: all 1s ease;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
           }
           .projectCaption {
             display: block;
@@ -424,14 +426,51 @@ section {
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  section{
+    .portfolio{
+      .project{
+        &__image{
+          .projectCaption {
+            position: static;
+            display: block;
+            top: auto;
+            left: auto;
+            transform: translate(0, 0);
+            padding-top: 0.5rem;
+            margin-bottom: 0;
+            font-size: 14px;
+            color: dimgray;
+           }
+           &:hover{
+            .projectCaption{
+              display: block;
+              color: dimgray;
+            }
+            img{
+              filter: brightness(100%);
+            }
+          }
+        }
+      }
+    }  
+  }
+}
 @media screen and (max-width: 576px) {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  h1{
+    font-size: 2rem;
+  }
   .navbar {
     flex-direction: row;
+    &__logo{
+      h3{
+        font-size: 1.75rem;
+      }
+    }
     &__icons {
       display: block;
     }
@@ -456,7 +495,7 @@ section {
     }
   }
   section {
-    margin-top: 2rem;
+    margin-top: 1rem;
     .banner {
       flex-direction: column-reverse;
       gap: 1rem;
@@ -465,6 +504,12 @@ section {
         &--button {
           align-items: center;
         }
+        h1{
+            font-size: 2.5rem;
+          }
+          p{
+            padding-bottom: 0;
+          }
       }
       &__right {
         width: 80%;
@@ -478,17 +523,56 @@ section {
       &__buttons {
         grid-template-columns: 1fr;
       }
+      &__heading{
+        padding-bottom: 0;
+      }
+      &__text{
+        padding-bottom: 1rem;
+      }
     }
     .iDo {
+      padding-bottom: 70px;
+      h1{
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+      }
       &__row {
         &--card {
           width: 100%;
         }
       }
     }
+    .skills{
+      padding-bottom: 70px;
+      h1{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+      }
+    }
+    .portfolio{
+      padding-bottom: 70px;
+      h1{
+        margin-bottom: 0;
+      }
+      .project{
+        &__desc{
+          h3{
+            font-size: 1.3rem;
+          }
+          h4{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
     .contact {
       padding: 0;
+      h1{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+      }
       .form {
+        margin-top: 0;
         &__row {
           flex-direction: column;
           gap: 0px !important;
