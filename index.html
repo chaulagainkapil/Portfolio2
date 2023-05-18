@@ -711,7 +711,12 @@
         </svg>
       </button>
     </section>
-    <div class="first"></div>
+    <footer class="footer">
+      <div class="footer__copyright">
+        <p class="text-center">Copyright ©2023 <a href="#about">Lorem Ipsum</a> </p>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -725,7 +730,11 @@
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
-        
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },        
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

@@ -4,6 +4,7 @@ $font__DM: "DM Sans", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
+
 input:-webkit-autofill {
   -webkit-background-clip: text;
   -webkit-text-fill-color: whitesmoke !important;
@@ -269,7 +270,7 @@ section {
       text-align: center;
     }
     .form {
-      margin: 82px 0;
+      margin: 5rem 0 1rem;
       &__row {
         display: flex;
         justify-content: space-between;
@@ -325,6 +326,18 @@ section {
   z-index: 2;
   bottom: 30px;
   right: 30px;
+}
+
+.footer{
+ &__copyright{
+  p{
+    color: white;
+    a{
+      color: #27ae60;
+      text-decoration: none;
+    }
+  }
+ }
 }
 
 @media screen and (max-width: 1200px) {
