@@ -55,23 +55,6 @@ $(document).ready(function () {
         }
       });
 
- 
-
-  //counter for skills
-  $(".count").each(function () {
-    var $this = $(this);
-    jQuery({ Counter: 0 }).animate(
-      { Counter: $this.attr("data-stop") },
-      {
-        duration: 1000,
-        easing: "swing",
-        step: function (now) {
-          $this.text(Math.ceil(now) + "%");
-        },
-      }
-    );
-  });
-
   // Disable inspect element
 // $(document).bind("contextmenu",function(e) {
 //     e.preventDefault();
@@ -83,4 +66,27 @@ $(document).ready(function () {
 //   });
 });
 
-
+//counter for skills
+var flag = "true";
+  $(document).on("scroll", function (evt) {
+    console.log($(this).scrollTop());
+    if (flag == "true") {
+    if ($(evt.target).scrollTop() >= 1500) {
+      $(".count").each(function () {
+        var $this = $(this);
+        jQuery({ Counter: 0 }).animate(
+          { Counter: $this.attr("data-stop") },
+          {
+            duration: 1000,
+            easing: "swing",
+            step: function (now) {
+              $this.text(Math.ceil(now) + "%");
+            },
+          }
+        );
+      });
+      flag="false";
+      console.log(flag);
+    }
+  }
+  });
