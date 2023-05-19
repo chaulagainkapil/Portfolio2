@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   //scroll to Top
   $(document).on("scroll", function (evt) {
@@ -33,7 +32,6 @@ $(document).ready(function () {
     $(".navbar__icons--open").css("display", "none");
     $(".navbar__icons--close").css("display", "block");
     $("body").css("overflowY", "hidden");
-
   });
   //navbar closing
   function closeNav() {
@@ -43,44 +41,50 @@ $(document).ready(function () {
     $(".navbar__icons--open").css("display", "block");
     $(".navbar__icons--close").css("display", "none");
     $("body").css("overflowY", "visible");
-
   }
   $(".navbar__icons--close").click(function () {
     closeNav();
   });
-    $(".navbar__menu ul li a").click(function () {
-        if (window.matchMedia('(max-width: 576px)').matches) {
-
-        closeNav();
-        }
-      });
-
- 
-
-  //counter for skills
-  $(".count").each(function () {
-    var $this = $(this);
-    jQuery({ Counter: 0 }).animate(
-      { Counter: $this.attr("data-stop") },
-      {
-        duration: 1000,
-        easing: "swing",
-        step: function (now) {
-          $this.text(Math.ceil(now) + "%");
-        },
-      }
-    );
+  $(".navbar__menu ul li a").click(function () {
+    if (window.matchMedia("(max-width: 576px)").matches) {
+      closeNav();
+    }
   });
 
+  
+
   // Disable inspect element
-// $(document).bind("contextmenu",function(e) {
-//     e.preventDefault();
-//   });
-//   $(document).keydown(function(e){
-//     if(e.which === 123){
-//       return false;
-//   }
-//   });
+  // $(document).bind("contextmenu",function(e) {
+  //     e.preventDefault();
+  //   });
+  //   $(document).keydown(function(e){
+  //     if(e.which === 123){
+  //       return false;
+  //   }
+  //   });
 });
 
-
+//counter for skills
+var flag = "true";
+  $(document).on("scroll", function (evt) {
+    console.log($(this).scrollTop());
+    if (flag == "true") {
+    if ($(evt.target).scrollTop() >= 1500) {
+      $(".count").each(function () {
+        var $this = $(this);
+        jQuery({ Counter: 0 }).animate(
+          { Counter: $this.attr("data-stop") },
+          {
+            duration: 1000,
+            easing: "swing",
+            step: function (now) {
+              $this.text(Math.ceil(now) + "%");
+            },
+          }
+        );
+      });
+      flag="false";
+      console.log(flag);
+    }
+  }
+  });
